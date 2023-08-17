@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+:root{
+    --bg-color: 0, 0%, 94%;
+
+    --grey-color: 0, 0%, 100%;
+    --black-color: 0, 0%, 8%;
+    --purple-color: 259, 100%, 65%;
+    --red-color: 0, 100%, 67%;
+
+    --font-small: 15px; 
+    --font-xl: 32px;
+    --font--xxl: 64px;
+}
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.inputs{
+    
+    padding: 0 20px;
+    border: 1px solid rgb(161, 161, 161);
+    border-radius: 10px;
+    height: 55px;
+    width: 100%;
+    font-size: min(var(--font-xl, 100%));
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+body{
+    background-color: hsl(var(--bg-color));
+    min-height: 100vh;
+}
+main{
+    margin: 0 18px;
+    width: 656px;
+    background-color: hsl(var(--grey-color));
+    padding: 2rem;
+    border-radius: 1rem 1rem 5rem;
+}
+header{
+    width: 100%;
+    display: flex;
+    gap: 1.5em;
+}
+.input-container{
+    width: 24%;
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+label{
+    display: block;
+    font-weight: 400;
+    font-size: var(--font-small);
+    letter-spacing: 4px;
+    color: grey;
+}
+p{
+    width: inherit;
+    display: inline;
+    color: hsl(var(--purple-color));
+}
+.container-btn{
+    position: relative;
+    justify-content: flex-end;
+}
+.container-btn::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: hsl(var(--purple-color));
+}
+button{
+    background-color: hsl(var(--purple-color));
+    cursor: pointer;
+    padding: .4rem;
+    border: none;
+    border-radius: 100%;
+    z-index: 1;
+}
+button:hover{
+    background-color: hsl(var(--black-color));
+}
+h1{
+    width: 100%;
+    font-size: var(--font--xxl);
+    font-weight: 800; /* Peso de fuente en negrita (bold) */
+    font-style: italic; /* Estilo de fuente en itálica */
+}
+.wrong{
+   border: 1px solid hsl(var(--red-color));
+}
+.p-year,
+.p-day,
+.p-month{
+    font-style: italic;
+    color: hsl(var(--red-color));
+    font-size: 13px;
+}
